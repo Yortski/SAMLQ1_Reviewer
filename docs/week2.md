@@ -1,146 +1,205 @@
-# Week 3: S.A. Operating Systems and Maintenance
-
-Week 3 focuses on essential server management tasks in Windows Server 2008 R2, emphasizing system maintenance, User Account Control (UAC), system settings, remote access, and network connectivity. 
-
-System maintenance is critical for organizational efficiency and security, involving updates, hardware management, and user account configurations. UAC enhances security by requiring administrator permission for potentially harmful actions, with adjustable security levels. 
-
-System settings centralize management of health, updates, and protection, including hardware and user account configurations. 
-
-Remote settings enable administrative access and collaborative troubleshooting, with Remote Desktop supporting multiple connections and Network Level Authentication enhancing security. 
-
-Network connectivity relies on proper IP address configuration and date/time synchronization for reliable service delivery. 
-
-Best practices include regular updates, secure remote access configurations, and synchronized system settings to ensure optimal server performance and security.
+# Week 3 – Operating Systems and Maintenance (Windows Server 2008 R2 Administration)
 
 ---
 
-## Major Topics Outline  
+## Overview
 
-- **System Maintenance Importance**  
-- **User Account Control (UAC)**  
-  - Features  
-  - Standard User Capabilities  
-  - UAC Security Impact  
-- **System Settings**  
-  - Control Panel Interface  
-  - Key System Configurations  
-  - Computer Name and Domain Settings  
-  - Workgroups vs Domains  
-- **Remote Settings**  
-  - Remote Assistance  
-  - Remote Desktop  
-  - Network Level Authentication  
-- **Network Connectivity**  
-  - IP Address Configuration  
-  - Date and Time Synchronization  
+This week focuses on essential administration, configuration, and maintenance tasks within a Windows Server 2008 R2 environment. Emphasis is placed on system security, remote management, domain integration, and proper network configuration to ensure stable and secure server operations in organizational settings.
 
 ---
 
-## Glossary  
+## Learning Objectives
 
-- **User Account Control (UAC)** — A security feature in Windows that prevents unauthorized changes by requiring administrator permission for certain actions.  
-- **Workgroup** — A peer-to-peer network where user accounts are decentralized and stored on each individual computer.  
-- **Domain** — A centralized logical unit for scalable security and management through Active Directory, defining a security boundary controlled by domain controllers.  
-- **Network Level Authentication (NLA)** — A security method that completes user authentication before establishing a full remote desktop connection, enhancing security against unauthorized access.  
+By the end of this lesson, students should be able to:
 
----
-
-## Section Summaries  
-
-### **System Maintenance Importance**  
-
-- Essential for organizational efficiency and security.  
-- Involves regular updates, hardware management, and user account configurations.  
-- Critical for maintaining system health and reliability.  
-
-### **User Account Control (UAC)**  
-
-- Enhances security by requiring permission for potentially harmful actions.  
-- Standard users can perform basic tasks without administrative rights.  
-- Adjustable security levels via a slider in the Control Panel.  
-
-### **System Settings**  
-
-- Centralized management of system health, updates, and protection.  
-- Includes hardware and user account management.  
-- Key configurations involve computer naming, domain membership, and remote access settings.  
-
-### **Remote Settings**  
-
-- Remote Assistance allows collaborative troubleshooting.  
-- Remote Desktop provides full administrative access.  
-- Network Level Authentication enhances remote connection security.  
-
-### **Network Connectivity**  
-
-- IP address configuration is essential for network communication.  
-- Date and time synchronization is critical for logging and security.  
-- Proper configuration ensures reliable service delivery.  
+- Perform essential server management and maintenance tasks
+- Configure system settings such as remote access, domain membership, and date/time synchronization
+- Understand and apply LAN/WAN technologies according to network design requirements
+- Maintain secure and properly configured Windows Server environments
 
 ---
 
-## Technical Specifications  
+## Key Terms
 
-- **Remote Desktop Connections**: Supports two remote desktop connections plus one console mode by default.  
-- **Network Level Authentication**: Completes user authentication before establishing a full connection.  
+Important terminology for Windows Server administration includes:
 
----
-
-## Comparisons  
-
-### **Workgroups vs Domains**  
-
-- **Workgroup**  
-  - Decentralized  
-  - Peer-to-peer  
-  - User accounts stored locally  
-- **Domain**  
-  - Centralized  
-  - Scalable security  
-  - Managed by Active Directory  
-
-### **Remote Assistance vs Remote Desktop**
-
-- **Remote Assistance**  
-  - Collaborative troubleshooting  
-  - Shared control  
-  - Encrypted connection  
-- **Remote Desktop**  
-  - Full administrative access  
-  - Supports multiple connections  
-  - Network Level Authentication  
+- User Account Control (UAC)
+- Domain
+- Active Directory Services
+- Device Driver
+- Plug and Play
+- Workgroup
+- Network Level Authentication (NLA)
 
 ---
 
-## Procedures  
+## Performing Initial Configuration Tasks
 
-### **Enable or Disable UAC**  
+After installation, Windows Server 2008 R2 automatically opens the Initial Configuration Tasks window. This interface helps administrators complete essential setup steps.
 
-1. Access User Accounts in the Control Panel.  
-2. Select the target account.  
-3. Click Change User Account Control settings.  
-4. Adjust the slider to the appropriate security option.  
-5. Restart the system for changes to take effect.  
+Key configuration actions include:
 
-### **Setting Up Remote Assistance**  
+- Enabling Remote Desktop and configuring Windows Firewall
+- Updating Windows and installing roles and features
+- Configuring network settings
+- Assigning a computer name and joining a domain
+- Activating Windows
+- Setting the correct date, time, and time zone
 
-1. Install Remote Assistance as a Windows feature.  
-2. Enable the option in the Remote tab of System properties.  
-3. Send an invitation via email or instant message.  
-4. Establish a two-way encrypted connection after acceptance.  
-
-### **Verifying NLA Support**  
-
-1. Start a Remote Desktop Connection.  
-2. Click the icon in the upper-left corner of the dialog box.  
-3. Select the About option from the menu.  
-4. Verify the text: 'Network Level Authentication supported.'  
+Completing these tasks ensures the server is secure, network-ready, and properly integrated into the organization’s infrastructure.
 
 ---
 
-## Best Practices and Recommendations  
+## Using the Control Panel
 
-- Regularly update Windows and install necessary roles and features.  
-- Configure Network Level Authentication for enhanced remote desktop security.  
-- Synchronize date and time settings for reliable logging and authentication.  
-- Use Remote Assistance for collaborative troubleshooting to minimize downtime.
+The Control Panel provides centralized access to system configuration tools.
+
+Primary areas include:
+
+System and Security  
+- Monitor system health  
+- Configure Windows Update  
+- Manage firewall and security settings  
+
+Hardware  
+- Manage devices and drivers  
+- Configure hardware settings  
+
+User Accounts  
+- Manage user permissions  
+- Configure account settings and profiles  
+
+Effective navigation of the Control Panel is essential for system-wide administration.
+
+---
+
+## Understanding User Account Control (UAC)
+
+User Account Control (UAC) improves security by preventing unauthorized system changes through permission prompts.
+
+Key features:
+
+- Mandatory prompts for configuration changes
+- Administrator approval required for sensitive tasks
+- Standard users must provide administrator credentials for restricted actions
+
+Standard User Capabilities:
+
+- Install approved updates and drivers from Windows Update
+- View system settings without modifying them
+- Pair Bluetooth devices
+- Reset network adapters and run diagnostics
+
+Adjusting UAC Settings:
+
+1. Open User Accounts in Control Panel
+2. Select the desired account
+3. Click “Change User Account Control settings”
+4. Adjust the security level using the slider
+5. Restart the system if required
+
+---
+
+## System Settings and Configuration
+
+Important configuration options include:
+
+- Viewing general system information
+- Adding the computer to a domain or workgroup
+- Accessing Device Manager for hardware configuration
+- Configuring Remote Settings
+- Managing Startup and Recovery options
+
+These settings allow administrators to define system identity, hardware configuration, and operational behavior.
+
+---
+
+## Changing Computer Name and Domain Membership
+
+Establishing system identity and network membership is critical.
+
+Workgroups:
+- Decentralized, peer-to-peer networks
+- User accounts stored locally on each machine
+
+Domains:
+- Centralized network management
+- Controlled through Active Directory
+- Scalable security and centralized authentication
+
+Joining a domain enables centralized policy enforcement and resource management.
+
+---
+
+## Configuring Remote Access
+
+Remote management tools allow administrators and support staff to access systems securely.
+
+### Remote Assistance
+
+- Install as a Windows feature
+- Enable in the Remote tab of System Properties
+- Send an invitation via email or messaging
+- Establish an encrypted two-way connection
+
+Used primarily for user support and troubleshooting.
+
+### Remote Desktop
+
+- Allows two simultaneous remote sessions (plus one console session)
+- Used for full administrative control
+
+Network Level Authentication (NLA):
+- Verifies user credentials before establishing a full remote session
+- Enhances security by reducing exposure to unauthorized access
+
+Remote Desktop can be configured to:
+
+- Allow connections from any version (less secure)
+- Require Network Level Authentication (more secure)
+
+---
+
+## Changing Date and Time
+
+Accurate date and time settings are critical for:
+
+- Event logging
+- Authentication
+- Security protocols
+- Domain communication
+
+Incorrect time synchronization can result in authentication failures and denial of secure communications.
+
+---
+
+## Network Connectivity Configuration
+
+Proper TCP/IP configuration is essential for communication.
+
+Key components include:
+
+IP Address and Subnet Mask  
+- Uniquely identify the device on the network  
+
+Default Gateway  
+- Router that enables communication outside the local network  
+
+DNS Servers  
+- Translate domain names into IP addresses  
+
+Correct configuration ensures reliable LAN and WAN connectivity.
+
+---
+
+## Session Review
+
+This session covered:
+
+- Initial Configuration Tasks
+- User Account Control (UAC)
+- System Settings and Domain Membership
+- Remote Assistance and Remote Desktop
+- Network Connectivity and TCP/IP Configuration
+
+Mastering these administrative tasks ensures secure, stable, and properly configured Windows Server 2008 R2 environments.
